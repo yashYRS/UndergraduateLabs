@@ -1,0 +1,44 @@
+
+ 
+ Cases with 5 elements 
+ 1. BEST 
+Array - 	1 2 3 4 5 
+ 1. Operations - 6  2. Swaps - 0
+AFTER SORTING Array - 	1 2 3 4 5 
+ 2. WORST 
+Array - 	20 19 18 17 16 
+ 1. Operations - 18  2. Swaps - 18
+AFTER SORTING Array - 	16 15 14 17 18 
+
+ 
+ Cases with 10 elements 
+ 1. BEST 
+Array - 	1 2 3 4 5 6 7 8 9 10 
+ 1. Operations - 11  2. Swaps - 0
+AFTER SORTING Array - 	1 2 3 4 5 6 7 8 9 10 
+ 2. WORST 
+Array - 	16 15 14 17 18 19 20 13 12 11 
+ 1. Operations - 63  2. Swaps - 45
+AFTER SORTING Array - 	11 10 9 12 13 14 15 16 17 18 
+
+ 
+ Cases with 15 elements 
+ 1. BEST 
+Array - 	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
+ 1. Operations - 16  2. Swaps - 0
+AFTER SORTING Array - 	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
+ 2. WORST 
+Array - 	11 10 9 12 13 14 15 16 17 18 19 20 8 7 6 
+ 1. Operations - 133  2. Swaps - 70
+AFTER SORTING Array - 	6 5 4 7 8 9 10 11 12 13 14 15 16 17 18 
+
+ 
+ Cases with 20 elements 
+ 1. BEST 
+Array - 	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+ 1. Operations - 221  2. Swaps - 30
+AFTER SORTING Array - 	1 2 3 4 5 5 6 6 7 8 9 10 11 12 13 14 15 16 17 18 
+ 2. WORST 
+Array - 	19 20 4 7 8 9 10 11 12 13 14 15 16 17 18 19 20 3 2 1 
+ 1. Operations - 228  2. Swaps - 82
+AFTER SORTING Array - 	1 2 3 4 7 8 9 10 11 12 13 14 15 16 17 18 19 19 20 20 
