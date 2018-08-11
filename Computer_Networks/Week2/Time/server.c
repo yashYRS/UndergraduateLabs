@@ -1,3 +1,5 @@
+// Server Program returns the current time details, when asked by a client 
+
 #include<stdio.h>
 #include<string.h>
 #include<sys/types.h>

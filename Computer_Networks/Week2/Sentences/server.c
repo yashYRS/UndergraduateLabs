@@ -1,3 +1,5 @@
+// Server returns the IP address, port no of the client as well the message back in upper case l
+
 #include<stdio.h>
 #include<string.h>
 #include<sys/types.h>
