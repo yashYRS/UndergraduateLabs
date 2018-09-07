@@ -67,19 +67,19 @@ void pre(treeptr root) {
 void post(treeptr root){
 	if (!root)
 		return ; 
-	pre(root->left);
-	pre(root->right); 
+	post(root->left);
+	post(root->right); 
 	cout<< " "<< root->data ;	
 }
 void in(treeptr root){
 	if (!root)
 		return ; 
-	pre(root->left);
+	in(root->left);
 	cout<< " "<< root->data ;
-	pre(root->right); 
+	in(root->right); 
 }
 
-int main() {
+int main() 
 	treeptr root = NULL ;
 	int flag = 1 ; 
 	int retvar,var ; 
