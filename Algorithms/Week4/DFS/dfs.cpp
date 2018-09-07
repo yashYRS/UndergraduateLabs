@@ -7,7 +7,7 @@ int prompt (){
 	cout<<"\n\n Choose one of the following - "<<endl;
 	cout<<" 1. Insert an edge"<<endl;
 	cout<<" 2. Display graph in Array format..  "<<endl;
-	cout<<" 3. Depth First Traversal .. "<<endl ; 
+	cout<<" 3. DFS Traversal  "<<endl ; 
 	cout<<" 4. Exit"<<endl; 
 	int a ; 
 	cin>> a; 
@@ -17,6 +17,19 @@ void disp(int *g,int n) {
 	for(int i = 0 ; i < n ;i++) 
 		cout<<" "<<g[i];
 } 
+int next_remove(int *g, int n, int *m) {
+	int sum  ; 
+	for(int col = 0 ; col < n ; col++ ){
+		sum = 0 ; 	
+		if(m[col]==0) {				// check only for nodes that haven't been removed..
+			for(int i = 0 ; i < n ; i++ )
+				sum = sum + g[i*n + col] ;  	// find all incoming nodes.. 
+			if( sum == 0 )
+				return col ; // if no incoming nodes return 
+		}
+	}
+	return -1 ; // i.e no such column exists 
+}
 
 void display_dfs(int *g,int n){
 	int *dfsstack = (int *)calloc(n,sizeof(int)) ; 
@@ -25,15 +38,21 @@ void display_dfs(int *g,int n){
 	int *marked_graph = (int *)calloc(n,sizeof(int)) ; // shows whether a particular vertex has been accounted for.. 
 	int *push_order = (int *)calloc(n,sizeof(int)) ;
 	int *pop_order = (int *)calloc(n,sizeof(int)) ;
+	int *top_sort = (int *) calloc(n,sizeof(int)) ; 
 	int top = 0;
-	int push = 1, pop = 1; 
-	int i,temp = n ; dfsstack[top] = 0 ; marked_graph[0] = 1; push_order[0] = push; // initializations 
+	int push = 0, pop = 1; 
+	int i,temp = n ;  // initializations 
 	cout<<" The Depth First Traversal :- \t " ; 
-	cout<<" "<<1;
-	int curr_node ; 
-	for(int next_node = 0 ; next_node < n ; next_node++) {
-		curr_node = next_node ;
-		while ( temp > 1 ) {
+	int curr_node ;
+		if(top == 0 ){
+			curr_node = next_remove(g,n,marked_graph) ; 
+			dfsstack[top] = curr_node ; 
+			cout<<" "<<curr_node+1 ; 
+			push_order[curr_node] = ++push ; 
+			marked_graph[curr_node] = 1 ; 
+			temp-- ;
+		}
+		while ( temp > 0 ) {
 			for( i = 0 ; i < n ; i++) {		// check for the adjacent vertices..
 				if(g[curr_node*n +i] == 1 && marked_graph[i]==0 && curr_node!=i ){
 					cout<<"  "<<i+1 ; // print out the node 
@@ -42,7 +61,6 @@ void display_dfs(int *g,int n){
 					marked_graph[i] = 1; // mark the node ;
 					temp-- ; 
 					curr_node = dfsstack[top] ;
-					disp(dfsstack,n); cout<<endl; 
 					break; // since only the adjacent node needs to added 
 				}
 				else if(i == n-1) { 	// no more children left.. 
@@ -51,20 +69,23 @@ void display_dfs(int *g,int n){
 						dfsstack[top--] = -1 ; 
 						curr_node = dfsstack[top]; break ; 
 					}
-					else { 		
-						dfsstack[top] = -1 ; 
-						curr_node = next_node + 1; break ; 
+					else if(top == 0 ){
+						curr_node = next_remove(g,n,marked_graph) ; 
+						dfsstack[top] = curr_node ; 
+						cout<<" "<<curr_node+1 ; 
+						push_order[curr_node] = ++push ; 
+						marked_graph[curr_node] = 1 ; 
+						temp-- ;
+						break ; 
 					}
 				}
 			}	
 		}
-		while( top >= 0 )
-			pop_order[dfsstack[top--]] = pop++ ; 
-		
-	}
+	while( top >= 0 )
+		pop_order[dfsstack[top--]] = pop++ ; 
+
 	cout<<"\n The push order ->   "; disp(push_order,n) ; 
 	cout<<"\n The pop order ->   "; disp(pop_order,n) ; 
-	free(dfsstack); free(marked_graph); free(pop_order) ; free(push_order) ; 
 
 }
 
