@@ -47,10 +47,7 @@ int safety(int *need, int *allocate, int *max , int *work, int n, int m) {
 			} 
 		}
 	} 
-/*	cout<<"\n Max -> \n" ; print(max,n,m) ;
-	cout<<"\n Allocated -> \n" ; print(allocate,n,m) ;
-	cout<<"\n Needs -> \n" ; print(need,n,m) ;
-	cout<<"\n available -> \n" ; print(work, 1,m) ; */
+
 	for(int i = 0 ; i < n ; i++)  {
 		if (finish[i] == 0)
 			return 0 ; // unsafe 
@@ -68,9 +65,6 @@ int main() {
 	int n , m ; // n -> no of processors, m -> no of resource types 
 	int *available, *avail_copy , *maximum , *max_copy, *allocation , *alloc_copy , *need , *need_copy; 
 	
-	available = (int*)malloc(sizeof(int)*m*n) ; 
-	maximum = (int*)malloc(sizeof(int)*m*n) ;  
-	allocation = (int*)malloc(sizeof(int)*m*n) ; 
 	cout<<" Enter the number of resources " ;  cin >> m ; 
 	cout<<" Enter the number of processes " ; cin>> n ; 
 	cout<<" Enter the available resources "<<endl ;  available = take_input(1,m) ;  print(available,1,m) ; 
