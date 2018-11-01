@@ -45,7 +45,7 @@ int main() {
 		}
 		for(int j = 0 ; j < 20 ;  j++ ) { // 20 searches per case 
 			num = rand()%table_size ; 
-			if ( search (hash_table ,num , &success , &fail )  == 1 ) 
+			if ( search (hash_table ,num+1 , &success , &fail )  == 1 ) 
 				s_cases++ ; 
 			else 
 				u_cases++ ; 
