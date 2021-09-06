@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> Clock Page </title>
+
+</head>
+<body>
+    Today's Date - 
+    <span id="datetoday">
+    
+    </span>
+        <script language="javascript">
+
+            function displayDate(form) {
+                var dateObj = new Date();
+                var time = dateObj.getHours() + " : " + dateObj.getMinutes() + " : " + dateObj.getSeconds();
+                if (dateObj.getSeconds() == 0) {
+                    alert(" New Minute ");
+                }
+                var element = document.getElementById("datetoday")
+                element.innerText = time ; 
+            }
+
+            var t = setInterval(displayDate, 1000)
+        
+        </script>
+</body>
+</html>

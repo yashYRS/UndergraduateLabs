@@ -1,0 +1,9 @@
+﻿li {
+    display: inline;
+    padding-left: 2px;
+    column-width: 20px;
+}
+#nav {
+    background-color: #FF1654;
+    padding: 5px;
+} 

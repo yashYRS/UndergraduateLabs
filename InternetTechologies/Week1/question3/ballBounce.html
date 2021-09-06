@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Bouncing Ball</title>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+			<canvas id="canvid" width="1000" height="500" style="border:1px solid #000000;">
+				HTML 5 canvas not supported 
+				<script language="javascript">
+					var stepX = 3 ; 
+					var stepY = 3 ; 
+					var canvas = document.getElementById('canvid') ; 				
+					var dimensions = canvas.getBoundingClientRect() ; 
+					var X = dimensions.left  ;
+					var Y = dimensions.top ; 
+					function drawCircle( ctxt , x , y , radius , startAngle , endAngle ) {
+						ctxt.beginPath() ; 
+						ctxt.lineWidth = 0 ; 
+						ctxt.arc ( x , y , radius , startAngle , endAngle ) ; 	
+						ctxt.fill() ; 
+					}
+
+					function ballBounce() { 						
+						console.log ( dimensions.top , dimensions.bottom , dimensions.right , dimensions.left ) ; 
+						var ctxt = canvas.getContext('2d') ; 
+						ctxt.clearRect(0, 0, canvas.width, canvas.height);
+
+						if ( X > dimensions.right - 20 || X < dimensions.left ) {
+							stepX =  - stepX  ; 
+						}
+						if ( Y > dimensions.bottom - 20 || Y < dimensions.top ) {
+							stepY =  - stepY  ; 
+						}
+						X = X + stepX ; 
+						Y = Y + stepY ; 
+
+						drawCircle( ctxt , X , Y , 20 , 0, 2 * Math.PI ) ; 
+					}
+
+					var t = setInterval ( ballBounce , 10	 ) ; 
+					
+				</script>
+			</canvas>
+	<body>
+</html>

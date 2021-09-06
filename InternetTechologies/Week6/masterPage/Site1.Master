@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="masterPage.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title> 
+    </title>
+    <link rel="stylesheet" type="text/css" href="MasterPage.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav id="nav">  
+    <ul>  
+        <li><a href="WebForm1.aspx">Home</a></li>  
+        <li><a href="Electronics.aspx">Electronics</a></li>  
+        <li><a href="Offers.aspx">Offers</a></li>  
+        <li><a href="Baggages.aspx">Baggages</a></li>  
+    </ul>  
+</nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

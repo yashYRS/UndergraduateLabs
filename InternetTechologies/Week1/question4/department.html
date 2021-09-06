@@ -1,0 +1,129 @@
+ <!doctype html>
+ <html>
+ 	<head>
+ 		<title>
+ 			Computer Science Department
+ 		</title>
+ 		<style type="text/css">
+ 			html , body , #container{
+ 				height: 100% ; 
+ 				width : 100%;
+ 				font-family: Arial; 
+ 				color :  #2e2424 ;
+ 			}
+ 			#header { 
+ 				background-color:#e8f3ff; 
+ 				position: fixed ; 
+ 				top : 0 ;
+ 				left : 0 ;
+ 				height: 14% ; 
+ 				width : 100% ;
+ 			}
+ 			#welcome {
+ 				height: 100% ; 
+ 				display: inline ; 
+ 				vertical-align: middle ; 
+ 				float : right ;
+ 				padding-right:20px ; 
+ 				padding-top: 10px ; 
+ 			}
+ 			#logo {
+ 				float: left ; 
+ 				padding-left: 15px ; 
+ 				height: 100% ; 
+ 			}
+ 			.split {
+ 				height: 81%;
+  				width: 50%;
+  				top : 14%;
+				position: fixed;
+  				z-index: 1;	
+			}
+
+			.left {	
+  				left: 0;
+  				background-color: #dde4f0;
+			}
+
+			.right {
+  				right: 0;
+  				background-color: #d8e1f0;
+			}
+ 			#footer {
+ 				background-color:#595f66 ; 
+ 				bottom : 0;
+ 				left :  0 ;
+ 				position: fixed ; 
+ 				display: table-cell ; 
+ 				text-align: center ; 
+ 				height: 5% ; 
+ 				width: 100% ;
+ 			}
+ 			#rateHeading {
+				vertical-align: middle ; 
+				width : 50% ;
+				display: inline ; 
+				margin-right: 25px ; 
+				color : #fae3e3;
+ 			}
+ 			p {
+ 				padding-left :  5px ;
+ 			}
+			input[type=range] {
+  				width: 35%;
+  				vertical-align: middle ; 
+  				cursor: pointer;
+  				box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  				background: ##dde6f0 ; 
+  				margin-left: 25px ; 
+			}
+ 		</style>
+ 	</head>
+ 	<body>
+ 		<div id="container">
+	 		<div id="header">
+	 			<img id="logo" src="manipalLogo.png" > </img> 
+	 			<h2 id = "welcome"> Welcome to the Computer Science Department page </h2>
+	 		</div>
+	 		<div class="split left">
+	    		<h2> Fix Appointment </h2>
+	    		<p> Category of Appointment :  </p>
+  				<input type="radio" name="query" value="Re-evaluation" checked> Re-evaluation<br>
+				<input type="radio" name="query" value="Subject Doubt"> Subject Doubt<br>
+  				<input type="radio" name="query" value="Project"> Project<br>
+  				<input type="radio" name="query" value="Research"> Research<br>
+  				<input type="radio" name="query" value="Other"> Other<br>
+  				<p style="padding-top: 25px" > Choose from the list of teachers available - 
+  				<input list="teachers" name="teachers">
+  					<datalist id="teachers">
+    					<option value="Teacher 1">
+    					<option value="Teacher 2">
+    					<option value="Teacher 3 ">
+    					<option value="Teacher 4">
+    					<option value="Teacher 5">
+  					</datalist>
+  				</p>
+  				<p style="padding-top: 25px "> Choose a date and time -  <input type="datetime-local" name="bdaytime"> </p>
+  				<center><p style="padding-left: 40px; "> <input type="submit" style="border-radius:10%; padding: 20px ; font-size: 16px;"> </center>
+			</div>
+
+			<div class="split right">
+					<h2> Enter Credentials  </h2>
+					<p style="padding-top: 30px">   Name  <input type= "text">
+					<p style="padding-top: 20px">  Semester  <input type= "number">
+					<p style="padding-top: 20px">  Email address <input type= "email">
+					<p style="padding-bottom: 30px ; padding-top: 20px">  Phone Number  <input type = "tel"> </p>
+  					<textarea name="message" rows = "10" style="width:80%;" >
+
+Explain the reason for taking this appointment
+  					</textarea>
+  					<br>
+  					
+			</div>
+	 		<div id="footer">
+	 			<h4 id="rateHeading" > Rate the webpage </h4>
+				<input type="range" name="points" min="0" max="10" >
+	 		</div>
+	 	</div>
+ 	</body>
+ </html>

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> Position Display </title>
+    <style>
+        /* Style the element with the id "myHeader" */
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Style all elements with the class name "city" */
+        .city {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+    <script language="javascript">
+        function displayPosition(strId) {
+                var elementInput = document.getElementById(strId);
+                var rect = elementInput.getBoundingClientRect();
+                var strDisp = " Location (top, bottom , right , left ) - " + rect.top + "," + rect.bottom + "," + rect.right + "," + rect.left ; 
+                alert(strDisp.toString() ); 
+            }
+    </script>
+</head>
+<body>
+    
+    <h1 id="title" onClick="displayPosition(this.id)" >My Cities</h1>
+    <h2 id="city1" class="city"  onClick="displayPosition(this.id)" >London</h2>
+    <p id="t1" onClick="displayPosition(this.id)">London is the capital of England.</p>
+
+    <h2 id="city2" class="city" onClick="displayPosition(this.id)">Paris</h2>
+    <p id="t1" onClick="displayPosition(this.id)">Paris is the capital of France.</p>
+
+    <h2 id="city3" class="city" onClick="displayPosition(this.id)" >Tokyo</h2>
+    <p id="t1" onClick="displayPosition(this.id)">Tokyo is the capital of Japan.</p>
+    
+    <h2> Click on some things on screen to know their position </h2>
+  
+</body>
+</html>

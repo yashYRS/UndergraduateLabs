@@ -1,0 +1,4 @@
+1) Create an HMTL5 document to get an HTML5 element’s position on the web page with the help of CSS and JavaScript function.
+2) Write a JavaScript program to Wish a user at different hours of a day. Use appropriate dialog boxes for wishing the user. Display the dynamic clock on the web page. Make use of CSS and HTML5 elements for creative and attractive designs.
+3) Create an HTML5 document that displays a bouncing ball. Use HTML5 elements, CSS and JavaScript functions.
+4) Create a HTML5 form describing your department with all the possible attributes: INPUT with all TYPEs, SELECT, TEXTAREA, IMAGE etc.
