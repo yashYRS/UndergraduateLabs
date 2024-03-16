@@ -11,4 +11,4 @@ Operating Systems | Some popular solutions related to scheduling producer consum
 Computer Networks | Communication code writtern between Client and Server written in both UDP and TCP protocols| 5th Sem Aug'18 - Dec'18 |
 Parallel Programming | Programs written using CUDA and OpenCL that maximize the utilization of the parallel compute available | 6th Sem Jan'19- Apr'19| [Edge Detection using CUDA](https://github.com/tanmay2298/Parallel-Implementation-of-Edge-Detection-Algorithms)
 Compiler Design | Compiler Scripts written with Flex, yacc and Bison| 6th Sem Jan'19- Apr'19| [A simple Java Compiler](https://github.com/yashYRS/Java-Compiler)
-Internet Technologies | Simplistic webpages made using ASP.NET and C# | 7th Sem Aug'19- Dec'19| [Template for a Placement Portal](https://github.com/yashYRS/placement_portal)
+Internet Technologies | Simplistic webpages made using ASP.NET and C# | 7th Sem Aug'19- Dec'19|
